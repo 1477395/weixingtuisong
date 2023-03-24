@@ -210,8 +210,9 @@ if __name__ == "__main__":
         print("推送消息失败，请检查config.txt文件是否与程序位于同一路径")
         os.system("pause")
         sys.exit(1)
-    except SyntaxError:
+    except SyntaxError as s:
         print("推送消息失败，请检查配置文件格式是否正确")
+        print(s)
         os.system("pause")
         sys.exit(1)
  
